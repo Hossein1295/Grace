@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Section </title>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background-color: #3c3f43;
+    padding: 10px 0;
+}
+
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ .nav-Links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+.nav-links a:hover {
+    background-color: #5f5f5f;
+    border-radius: 5px;
+}
+
+
+     
+.upgrade-section {
+    display: flex;
+    align-items: center;
+}
+
+.mail-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.upgrade-btn {
+    background-color: #e70073;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.upgrade-btn:hover {
+    background-color: #d6006b;
+}   
+
+  
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+.fade {
+  animation: fadeEffect 1.5s ease-in-out;
+}
+
+
+
+
+
+.fade {
+  animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+</style>
+
+   
+</head>
+<body>
+<header>
+           
+          <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#"><img src="logoimg.png" alt="Home"></a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="about.html" target="_Blank">ABOUT US</a></li>
+                <li><a href="#">VISIT</a></li>
+                <li><a href="#">CONTACT US</a></li>
+               
+               <li><a href="#">LIFE</a></li>
+                <li><a  href="https://www.youtube.com/channel/UCszm3664N-GoaVsW2QlBHWw"   target="_Blank">MEDIA</a></li>
+                               
+                <li><a href="#">MORE...</a></li>
+            </ul>
+          <div class="upgrade-section">
+                <img src="Donait1.jpg" alt="Mail" class="mail-icon">
+                <a href="https://gcicanada.ca/giving/"  target="_Blank"  class="upgrade-btn">ONLINE GIVING</a>
+            </div>
+            
+        </nav>
+          </header>
+    <section class="hero-section">
+        <div class="slideshow-container">
+            <div class="slide fade">
+      <img src="image1.jpg" alt="Image 1" class="responsive-image">
+    </div>
+    <div class="slide fade">
+      <img src="image2.jpg" alt="Image 2" class="responsive-image">
+    </div>
+    <div class="slide fade">
+      <img src="image3.jpg" alt="Image 3" class="responsive-image">
+    </div>
+    <div class="slide fade">
+      <img src="image4.jpg" alt="Image 4" class="responsive-image">
+    </div>
+    <div class="slide fade">
+      <img src="image5.jpg" alt="Image 5" class="responsive-image">
+    </div>
+        </div>
+
+       
+        </div>
+    </section>
+
+    <script > 
+
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) { slideIndex = 1; }
+
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 6000); // Change image every 6 seconds
+}
+
+
+</script>
+</body>
+</html>
